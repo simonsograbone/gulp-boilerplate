@@ -2,6 +2,7 @@
   "name": "gulp-boilerplate",
   "version": "0.0.1",
   "description": "A Gulp-based boilerplate project",
+  "keywords": "boilerplate, frontend, javascript, gulp, browserify, sass, es6, es2015, stage-0, babel",
   "author": "Raice Hannay",
   "license": "GPL-3.0",
   "repository": "https://github.com/voodoocreation/gulp-boilerplate.git",
