@@ -62,7 +62,7 @@ gulp.task('clean', () =>
 /**
  * Compile and compress all project SASS files
  */
-gulp.task('scss', ['clean'], () =>
+gulp.task('scss', () =>
     gulp.src('src/scss/**/*.scss')
         .pipe(sass(SCSS_OPTIONS).on('error', sass.logError))
         .pipe(concat('index.css'))
@@ -83,7 +83,7 @@ gulp.task('scss:watch', ['scss'], () => {
 /**
  * Compile and compress all project JS files
  */
-gulp.task('js', ['clean'], () =>
+gulp.task('js', () =>
     browserify('src/js/index.js', BROWSERIFY_OPTIONS)
         .transform(babelify, BABEL_OPTIONS)
         .bundle()
@@ -107,7 +107,7 @@ gulp.task('js:watch', ['js'], () =>
 /**
  * Optimise all project images
  */
-gulp.task('images', ['clean'], () =>
+gulp.task('images', () =>
     gulp.src('src/images/**/*')
         .pipe(imagemin(IMAGEMIN_OPTIONS))
         .pipe(gulp.dest('dist/img'))
