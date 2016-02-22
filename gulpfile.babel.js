@@ -108,7 +108,7 @@ gulp.task('js:watch', ['js'], () =>
  * Optimise all project images
  */
 gulp.task('images', () =>
-    gulp.src('src/images/**/*')
+    gulp.src('src/img/**/*')
         .pipe(imagemin(IMAGEMIN_OPTIONS))
         .pipe(gulp.dest('dist/img'))
 )
@@ -117,7 +117,7 @@ gulp.task('images', () =>
  * Watch all image files and run the 'images' task when modified
  */
 gulp.task('images:watch', ['images'], () =>
-    gulp.watch('src/images/**/*', ['images'])
+    gulp.watch('src/img/**/*', ['images'])
 )
 
 // endregion Images
